@@ -4,6 +4,8 @@ A new Flutter project to register ARMIRENE employees.
 
 ## Getting Started
 
+Desarrollado en flutter usando sqflite
+
 ## Building and running
 
 First install dependencies:

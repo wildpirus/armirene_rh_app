@@ -39,6 +39,7 @@ class InputDropdown extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: Colors.black),
           decoration: InputDecoration(
+            border: OutlineInputBorder(), 
             labelText: textLabel,
             labelStyle: const TextStyle(
                 fontFamily: "OpenSans",

@@ -1,4 +1,4 @@
-import 'package:armirene_rh_app/Screens/home/components/home_form.dart';
+import 'package:armirene_rh_app/Screens/search/components/search_form.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -6,8 +6,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SingleChildScrollView(
-      child: HomeForm(),
-    );
+    return  SafeArea(child: SearchForm());
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:armirene_rh_app/constans.dart';
 import 'package:armirene_rh_app/screens/home/home_screen.dart';
 import 'package:armirene_rh_app/screens/register/register_screen.dart';
+import 'package:armirene_rh_app/Screens/search/search_screen.dart';
 
 class MyBottomNavBar extends StatelessWidget {
   const MyBottomNavBar({
@@ -42,6 +43,7 @@ class MyBottomNavBar extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
+              Navigator.of(context).popUntil((route) => false);
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => HomeScreen()),
@@ -50,7 +52,12 @@ class MyBottomNavBar extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.search),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SearchScreen()),
+              );
+            },
           ),
         ],
       ),

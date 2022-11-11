@@ -12,6 +12,7 @@ class RegisterScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: kPrimaryColor,
+        title: const Text('Registro de Empleado'),
       ),
       body: Body(),
       bottomNavigationBar: const MyBottomNavBar(),

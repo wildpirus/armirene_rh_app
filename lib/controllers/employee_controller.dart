@@ -1,9 +1,6 @@
 import '../domain/use_case/employee_manager.dart';
 import 'package:get/get.dart';
 import '../domain/entities/employee.dart';
-import '../domain/repositories/employee_repository.dart';
-import '../utils/utils.dart';
-import '../domain/use_case/employee_manager.dart';
 
 class EmployeeController extends GetxController {
   EmployeeManager _useCase = Get.find<EmployeeManager>();
@@ -34,5 +31,16 @@ class EmployeeController extends GetxController {
 
   Future<List<Map<String, dynamic>>> getAllEmployees() async {
     return await _useCase.getAllEmployees();
+  }
+
+  generateEmail(int countEmail, String country, String firstName, String lastName) {
+    String domain = country == "Colombia" ? "armirene.com.co" : "armirene.com.us";
+    String email;
+    if (countEmail > 0) {
+      email = "$firstName.$lastName.$countEmail@$domain";
+    } else {
+      email = "$firstName.$lastName@$domain";
+    }
+    return email;
   }
 }

@@ -34,6 +34,7 @@ class _DatePickerBoxState extends State<DatePickerBox> {
           return null;
         },
         decoration: const InputDecoration(
+          border: OutlineInputBorder(),
           labelText: "Fecha de Ingreso",
           labelStyle: TextStyle(
               fontFamily: "OpenSans",
@@ -52,7 +53,7 @@ class _DatePickerBoxState extends State<DatePickerBox> {
         minTime: DateTime.now().subtract(const Duration(days: 30)),
         onChanged: (date) {}, onConfirm: (date) {
       setState(() {
-        _value = formatDate(DateTime.now(), [dd, '/', mm, '/', yyyy]);
+        _value = formatDate(date, [dd, '/', mm, '/', yyyy]);
         widget.controller!.text = _value;
       });
     }, currentTime: DateTime.now(), locale: LocaleType.en);

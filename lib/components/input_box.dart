@@ -44,7 +44,9 @@ class InputBox extends StatelessWidget {
           FilteringTextInputFormatter.allow(regexList[filter] ?? RegExp(r'')),
         ],
         decoration: InputDecoration(
+          border: OutlineInputBorder(), 
           labelText: textLabel,
+          hintText: 'Ingrese $textLabel',
           labelStyle: const TextStyle(
               fontFamily: "OpenSans",
               fontWeight: FontWeight.bold,

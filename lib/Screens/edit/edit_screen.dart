@@ -16,7 +16,7 @@ class EditScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: kPrimaryColor,
-        title: const Text('Registro de Empleado'),
+        title: const Text('Editar Empleado'),
       ),
       body: Body(controllers: getControllers()),
       bottomNavigationBar: const MyBottomNavBar(),

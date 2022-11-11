@@ -4,7 +4,7 @@ A new Flutter project to register ARMIRENE employees.
 
 ## Getting Started
 
-## Building and running on localhost
+## Building and running
 
 First install dependencies:
 
